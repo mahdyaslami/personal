@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url('Vazir-Black-FD-WOL.woff2') format('woff2'),
+        url('Vazir-Black-FD-WOL.woff') format('woff'),
+        url('Vazir-Black-FD-WOL.eot') format('eot'),
+        url('Vazir-Black-FD-WOL.ttf') format('ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('Vazir-Bold-FD-WOL.woff2') format('woff2'),
+        url('Vazir-Bold-FD-WOL.woff') format('woff'),
+        url('Vazir-Bold-FD-WOL.eot') format('eot'),
+        url('Vazir-Bold-FD-WOL.ttf') format('ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('Vazir-FD-WOL.woff2') format('woff2'),
+        url('Vazir-FD-WOL.woff') format('woff'),
+        url('Vazir-FD-WOL.eot') format('eot'),
+        url('Vazir-FD-WOL.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('Vazir-Medium-FD-WOL.woff2') format('woff2'),
+        url('Vazir-Medium-FD-WOL.woff') format('woff'),
+        url('Vazir-Medium-FD-WOL.eot') format('eot'),
+        url('Vazir-Medium-FD-WOL.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('Vazir-Light-FD-WOL.woff2') format('woff2'),
+        url('Vazir-Light-FD-WOL.woff') format('woff'),
+        url('Vazir-Light-FD-WOL.eot') format('eot'),
+        url('Vazir-Light-FD-WOL.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('Vazir-Thin-FD-WOL.woff2') format('woff2'),
+        url('Vazir-Thin-FD-WOL.woff') format('woff'),
+        url('Vazir-Thin-FD-WOL.eot') format('eot'),
+        url('Vazir-Thin-FD-WOL.ttf') format('ttf');
+    font-weight: 100;
+    font-style: normal;
+}
