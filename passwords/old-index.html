@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link href="persian.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav style="padding: 0 25px; margin-bottom: 50px;">
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">MAKH</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="personal/passwords">Passwords</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <table id="passwords" class="striped">
+            <thead>
+              <tr>
+                <th>Domain</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr v-for="account in accounts">
+                <td>{{ account.domain }}</td>
+                <td>{{ account.username }}</td>
+                <td>{{ account.password }}</td>
+                <td>{{ account.description }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- production version, optimized for size and speed -->
+    
+    <script>
+      
+    </script>
+  </body>
+</html>
