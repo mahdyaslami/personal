@@ -14,4 +14,9 @@ var app4 = new Vue({
           }
         })
     },
+    methods: {
+        copyClick(ev) {
+            alert('here');
+        }
+    }
   })

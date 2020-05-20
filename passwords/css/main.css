@@ -292,10 +292,10 @@ tbody tr:hover {
 
 #passwords tr > th:first-child,
 #passwords tr > td:first-child{
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 #passwords tr > th:last-child,
 #passwords tr > td:last-child{
-  padding-right: 15px;
+  padding-right: 25px;
 }
