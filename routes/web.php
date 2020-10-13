@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\AccountController;
-use App\Models\Account;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
