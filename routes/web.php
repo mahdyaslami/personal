@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 $router->get('/accounts', [AccountController::class, 'index']);
+$router->get('/accounts/create', [AccountController::class, 'create']);

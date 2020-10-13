@@ -11,4 +11,9 @@ class AccountController extends Controller
     {
         return Account::all();
     }
+
+    public function create()
+    {
+        return view('accounts.create');
+    }
 }
