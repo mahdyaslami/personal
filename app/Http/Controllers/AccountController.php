@@ -16,4 +16,11 @@ class AccountController extends Controller
     {
         return view('accounts.create');
     }
+
+    public function store(Request $request)
+    {
+        $account = Account::create($request->all());
+
+        return $account;
+    }
 }

@@ -15,3 +15,4 @@ use App\Http\Controllers\AccountController;
 
 $router->get('/accounts', [AccountController::class, 'index']);
 $router->get('/accounts/create', [AccountController::class, 'create']);
+$router->post('/accounts', [AccountController::class, 'store']);
