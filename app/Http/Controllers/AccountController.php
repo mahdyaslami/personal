@@ -19,7 +19,14 @@ class AccountController extends Controller
 
     public function store(Request $request)
     {
-        $account = Account::create($request->all());
+        $validatedData = $request->validate([
+            'domain' => 'required|max:255',
+            'username' => 'required|max:255',
+            'password' => 'required|max:255',
+            'description' => 'required|max:4000',
+        ]);
+
+        $account = Account::create($validatedData);
 
         return $account;
     }

@@ -17,7 +17,7 @@ class CreateAccountsTable extends Migration
             $table->id();
             $table->string('domain', 255);
             $table->string('username', 255);
-            $table->string('passwords', 255);
+            $table->string('password', 255);
             $table->string('description', 4000)->nullable();
             $table->timestamps();
         });
