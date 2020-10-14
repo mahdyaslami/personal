@@ -12,6 +12,7 @@
 <body>
 
     <form action="/accounts" method="POST">
+        @csrf
 
         <div class="form-group">
             <label for="domain">Domain</label>
