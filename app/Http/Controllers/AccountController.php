@@ -33,13 +33,17 @@ class AccountController extends Controller
 
     public function show($id)
     {
-        return view('accounts.show', 
-            ['account' => Account::findOrFail($id)]);
+        return view(
+            'accounts.show',
+            ['account' => Account::findOrFail($id)]
+        );
     }
 
     public function edit($id)
     {
-        return view('accounts.edit', 
-            ['account' => Account::findOrFail($id)]);
+        return view(
+            'accounts.edit',
+            ['account' => Account::findOrFail($id)]
+        );
     }
 }
