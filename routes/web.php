@@ -17,3 +17,4 @@ $router->get('/accounts', [AccountController::class, 'index']);
 $router->get('/accounts/create', [AccountController::class, 'create']);
 $router->post('/accounts', [AccountController::class, 'store']);
 $router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
+$router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
