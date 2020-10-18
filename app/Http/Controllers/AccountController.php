@@ -31,8 +31,9 @@ class AccountController extends Controller
         return view('accounts.show', ['account' => $account]);
     }
 
-    public function show(Account $account)
+    public function show($id)
     {
-        return view('accounts.show', ['account' => $account]);
+        return view('accounts.show', 
+            ['account' => Account::findOrFail($id)]);
     }
 }
