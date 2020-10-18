@@ -9,7 +9,7 @@ class AccountController extends Controller
 {
     public function index()
     {
-        return Account::all();
+        return view('accounts.index', ['accounts' => Account::all()]);
     }
 
     public function create()
