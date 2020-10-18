@@ -23,7 +23,11 @@
                 @foreach ($accounts as $key => $account)
                 <tr>
                     <th scope="row">{{ $key + 1 }}</th>
-                    <td>{{ $account->domain }}</td>
+                    <td>
+                        <a href="{{ $account->path() }}">
+                            {{ $account->domain }}
+                        </a>
+                    </td>
                     <td>{{ $account->username }}</td>
                     <td>{{ $account->password }}</td>
                     <td>{{ $account->description }}</td>

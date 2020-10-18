@@ -15,4 +15,9 @@ class Account extends Model
      * @var array
      */
     protected $fillable = ['domain', 'username', 'password', 'description'];
+
+    public function path()
+    {
+        return route('accounts.show', ['account' => $this->id]);
+    }
 }
