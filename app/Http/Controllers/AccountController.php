@@ -28,6 +28,6 @@ class AccountController extends Controller
 
         $account = Account::create($validatedData);
 
-        return $account;
+        return view('accounts.show', ['account' => $account]);
     }
 }
