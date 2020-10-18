@@ -30,4 +30,9 @@ class AccountController extends Controller
 
         return view('accounts.show', ['account' => $account]);
     }
+
+    public function show(Account $account)
+    {
+        return view('accounts.show', ['account' => $account]);
+    }
 }

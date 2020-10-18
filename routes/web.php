@@ -16,3 +16,4 @@ use App\Http\Controllers\AccountController;
 $router->get('/accounts', [AccountController::class, 'index']);
 $router->get('/accounts/create', [AccountController::class, 'create']);
 $router->post('/accounts', [AccountController::class, 'store']);
+$router->get('/accounts/{account}', [AccountController::class, 'show']);
