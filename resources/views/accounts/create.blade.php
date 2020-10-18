@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+
 <div class="py-5 text-center">
     <h2>Accounts form</h2>
     <p class="lead">Add your accounts credential here.</p>
