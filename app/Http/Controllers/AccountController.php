@@ -17,14 +17,9 @@ class AccountController extends Controller
         return view('accounts.create');
     }
 
-    public function store(Request $request)
+    public function store()
     {
-        $validatedData = $request->validate([
-            'domain' => 'required|max:255',
-            'username' => 'required|max:255',
-            'password' => 'required|max:255',
-            'description' => 'required|max:4000',
-        ]);
+        $validatedData = $this->validateAccount();
 
         $account = Account::create($validatedData);
 
@@ -45,5 +40,15 @@ class AccountController extends Controller
             'accounts.edit',
             ['account' => Account::findOrFail($id)]
         );
+    }
+
+    protected function validateAccount()
+    {
+        return request()->validate([
+            'domain' => 'required|max:255',
+            'username' => 'required|max:255',
+            'password' => 'required|max:255',
+            'description' => 'sometimes|required|max:4000',
+        ]);
     }
 }
