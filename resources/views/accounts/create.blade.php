@@ -15,7 +15,7 @@
             <div class="form-group">
                 <label for="domain">Domain</label>
 
-                <input type="text" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" @error('domain') aria-describedby="domain-validation-error" @enderror>
+                <input type="text" value="{{ old('domain') }}" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" @error('domain') aria-describedby="domain-validation-error" @enderror>
 
                 @error('domain')
                 <div id="domain-validation-error" class="invalid-feedback">{{ $message }}</div>
@@ -25,7 +25,7 @@
             <div class="form-group">
                 <label for="username">Username</label>
 
-                <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" id="username" @error('username') aria-describedby="username-validation-error" @enderror>
+                <input type="text" value="{{ old('username') }}" name="username" class="form-control @error('username') is-invalid @enderror" id="username" @error('username') aria-describedby="username-validation-error" @enderror>
 
                 @error('username')
                 <div id="username-validation-error" class="invalid-feedback">{{ $message }}</div>
@@ -35,7 +35,7 @@
             <div class="form-group">
                 <label for="password">Password</label>
 
-                <input type="text" name="password" class="form-control @error('password') is-invalid @enderror" id="password" @error('password') aria-describedby="password-validation-error" @enderror>
+                <input type="text" value="{{ old('password') }}" name="password" class="form-control @error('password') is-invalid @enderror" id="password" @error('password') aria-describedby="password-validation-error" @enderror>
 
                 @error('password')
                 <div id="password-validation-error" class="invalid-feedback">{{ $message }}</div>
@@ -44,7 +44,7 @@
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" rows="3" @error('description') aria-describedby="description-validation-error" @enderror></textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" value="{{ old('description')}}" name="description" id="description" rows="3" @error('description') aria-describedby="description-validation-error" @enderror>{{ old('description') }}</textarea>
 
                 @error('description')
                 <div id="description-validation-error" class="invalid-feedback">{{ $message }}</div>
