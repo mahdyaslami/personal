@@ -28,6 +28,9 @@
             </tbody>
         </table>
     </div>
+    <div class="col-md-12 text-right">
+        <a href="{{ route('accounts.index') }}" class="btn btn-primary">Show all</a>
+    </div>
 </div>
 
 @endsection

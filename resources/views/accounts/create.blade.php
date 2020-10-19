@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="py-5 text-center">
-    <h2>Accounts form</h2>
+    <h2>Accounts Credential</h2>
     <p class="lead">Add your accounts credential here.</p>
 </div>
 
@@ -51,7 +51,9 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn btn-primary mb-2">Save</button>
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary mb-2">Save</button>
+            </div>
         </form>
     </div>
 </div>

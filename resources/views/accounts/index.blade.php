@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="py-5 text-center">
-    <h2>Accounts</h2>
+    <h2>Accounts Credential</h2>
     <p class="lead">List of your accounts credential.</p>
 </div>
 
@@ -35,6 +35,9 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
+    <div class="col-md-12 text-right">
+        <a href="{{ route('accounts.create') }}" class="btn btn-success">+ New</a>
     </div>
 </div>
 
