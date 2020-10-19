@@ -18,6 +18,6 @@ class Account extends Model
 
     public function path()
     {
-        return route('accounts.show', ['account' => $this->id]);
+        return route('accounts.show', ['id' => $this->id]);
     }
 }
