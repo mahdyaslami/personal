@@ -3,8 +3,8 @@
 @section('content')
 
 <div class="py-5 text-center">
-    <h2>{{ $account->domain }} Account Credential</h2>
-    <p class="lead">List of your accounts credential.</p>
+    <h2>Account Credential</h2>
+    <p class="lead">{{ $account->domain }} credential.</p>
 </div>
 
 <div class="row">
