@@ -15,6 +15,7 @@ use App\Http\Controllers\AccountController;
 
 $router->get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
 $router->get('/accounts/create', [AccountController::class, 'create'])->name('accounts.create');
-$router->post('/accounts', [AccountController::class, 'store']);
+$router->post('/accounts', [AccountController::class, 'store'])->name('accounts.store');
 $router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
 $router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
+$router->put('/accounts/{id}', [AccountController::class, 'edit'])->name('accounts.update');

@@ -4,13 +4,14 @@
 
 <div class="py-5 text-center">
     <h2>Accounts Credential</h2>
-    <p class="lead">Add your accounts credential here.</p>
+    <p class="lead">{{ $account->domain }} credential.</p>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <form action="/accounts" method="POST">
+        <form action="{{ route('accounts.update', $account->id) }}" method="POST">
             @csrf
+            @method('PUT')
 
             <div class="form-group">
                 <label for="domain">Domain</label>

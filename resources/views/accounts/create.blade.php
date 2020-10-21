@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <form action="/accounts" method="POST">
+        <form action="{{ route('accounts.store') }}" method="POST">
             @csrf
 
             <div class="form-group">
