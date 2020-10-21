@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
-use Illuminate\Http\Request;
 
 class AccountController extends Controller
 {
@@ -40,6 +39,17 @@ class AccountController extends Controller
             'accounts.edit',
             ['account' => Account::findOrFail($id)]
         );
+    }
+
+    public function update($id)
+    {
+        $account = Account::findOrFail($id);
+
+        $validatedData = $this->validateAccount();
+
+        $account->fill($validatedData)->save();
+
+        return $account;
     }
 
     protected function validateAccount()

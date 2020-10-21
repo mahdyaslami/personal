@@ -45,7 +45,7 @@
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control @error('description') is-invalid @enderror" value="{{ old('description') ??  $account-> description }}" name="description" id="description" rows="3" @error('description') aria-describedby="description-validation-error" @enderror>{{ old('description') }}</textarea>
+                <textarea class="form-control @error('description') is-invalid @enderror" value="{{ old('description') ??  $account-> description }}" name="description" id="description" rows="3" @error('description') aria-describedby="description-validation-error" @enderror>{{ old('description') ?? $account->description }}</textarea>
 
                 @error('description')
                 <div id="description-validation-error" class="invalid-feedback">{{ $message }}</div>

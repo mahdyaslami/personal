@@ -18,4 +18,4 @@ $router->get('/accounts/create', [AccountController::class, 'create'])->name('ac
 $router->post('/accounts', [AccountController::class, 'store'])->name('accounts.store');
 $router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
 $router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
-$router->put('/accounts/{id}', [AccountController::class, 'edit'])->name('accounts.update');
+$router->put('/accounts/{id}', [AccountController::class, 'update'])->name('accounts.update');
