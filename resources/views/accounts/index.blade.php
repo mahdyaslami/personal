@@ -17,6 +17,7 @@
                     <th scope="col">Username</th>
                     <th scope="col">Password</th>
                     <th scope="col">Description</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,9 @@
                     <td>{{ $account->username }}</td>
                     <td>{{ $account->password }}</td>
                     <td>{{ $account->description }}</td>
+                    <td>
+                        <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

@@ -52,7 +52,8 @@
             </div>
 
             <div class="form-group text-right">
-                <button type="submit" class="btn btn-primary mb-2">Save</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <a href="{{ route('accounts.index') }}" class="btn btn-secondary">Cancel</a>
             </div>
         </form>
     </div>

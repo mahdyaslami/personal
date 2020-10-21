@@ -30,6 +30,7 @@
     </div>
     <div class="col-md-12 text-right">
         <a href="{{ route('accounts.index') }}" class="btn btn-primary">Show all</a>
+        <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-primary">Edit</a>
     </div>
 </div>
 
