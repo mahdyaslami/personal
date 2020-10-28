@@ -31,6 +31,11 @@
     <div class="col-md-12 text-right">
         <a href="{{ route('accounts.index') }}" class="btn btn-primary">Show all</a>
         <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-primary">Edit</a>
+        <form action="{{ route('accounts.destroy', $account->id) }}" method="POST" class="d-inline">
+            @csrf
+            @method('DELETE')
+            <input type="submit" class="btn btn-danger" value="Delete">
+        </form>
     </div>
 </div>
 

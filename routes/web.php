@@ -19,3 +19,4 @@ $router->post('/accounts', [AccountController::class, 'store'])->name('accounts.
 $router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
 $router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
 $router->put('/accounts/{id}', [AccountController::class, 'update'])->name('accounts.update');
+$router->delete('/accounts/{id}', [AccountController::class, 'destroy'])->name('accounts.destroy');

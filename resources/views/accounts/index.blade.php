@@ -34,6 +34,11 @@
                     <td>{{ $account->description }}</td>
                     <td>
                         <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                        <form action="{{ route('accounts.destroy', $account->id) }}" method="POST" class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+                        </form>
                     </td>
                 </tr>
                 @endforeach

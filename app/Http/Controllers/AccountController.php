@@ -52,6 +52,13 @@ class AccountController extends Controller
         return $account;
     }
 
+    public function destroy($id)
+    {
+        Account::destroy($id);
+
+        return redirect()->route('accounts.index');
+    }
+
     protected function validateAccount()
     {
         return request()->validate([
