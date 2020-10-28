@@ -1,0 +1,39 @@
+@import url(fonts/IRANSharp/fontiran.css); /* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+
+.d-none {
+    display: none;
+}
+
+.dir-rtl {
+    direction: rtl;
+    unicode-bidi: isolate;
+}
+
+.dir-ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-justify {
+    text-align: justify
+}
+
+body {
+	font-family: iransharp !important;
+}
+
+.iran-sharp {
+	font-family: iransharp !important;
+}
