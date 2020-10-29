@@ -30,7 +30,7 @@
                         </a>
                     </td>
                     <td>{{ $account->username }}</td>
-                    <td>{{ $account->password }}</td>
+                    <td><input type="button" class="btn btn-sm btn-secondary" value="Copy" onclick="navigator.clipboard.writeText('{{ $account->password }}')"></td>
                     <td>{{ $account->description }}</td>
                     <td>
                         <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-sm btn-primary">Edit</a>
