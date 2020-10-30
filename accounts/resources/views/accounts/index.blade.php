@@ -1,5 +1,13 @@
 @extends('layout')
 
+@section('style')
+<style>
+    .col-action {
+        min-width: 127px;"
+    }
+</style>
+@endsection
+
 @section('content')
 
 <div class="py-5 text-center">
@@ -32,7 +40,7 @@
                     <td>{{ $account->username }}</td>
                     <td><input type="button" class="btn btn-sm btn-secondary" value="Copy" onclick="navigator.clipboard.writeText('{{ $account->password }}')"></td>
                     <td>{{ $account->description }}</td>
-                    <td>
+                    <td class="col-action">
                         <a href="{{ route('accounts.edit', $account->id) }}" class="btn btn-sm btn-primary">Edit</a>
                         <form action="{{ route('accounts.destroy', $account->id) }}" method="POST" class="d-inline">
                             @csrf
