@@ -13,15 +13,18 @@ use App\Http\Controllers\AccountController;
 |
 */
 
-$router->get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
-$router->get('/accounts/create', [AccountController::class, 'create'])->name('accounts.create');
-$router->post('/accounts', [AccountController::class, 'store'])->name('accounts.store');
-$router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
-$router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
-$router->put('/accounts/{id}', [AccountController::class, 'update'])->name('accounts.update');
-$router->delete('/accounts/{id}', [AccountController::class, 'destroy'])->name('accounts.destroy');
-
 Auth::routes();
 
-$router->get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-$router->get('/', [App\Http\Controllers\HomeController::class, 'index']);
+$router->middleware('auth')->group(function () use ($router) {
+
+    $router->get('/accounts', [AccountController::class, 'index'])->name('accounts.index');
+    $router->get('/accounts/create', [AccountController::class, 'create'])->name('accounts.create');
+    $router->post('/accounts', [AccountController::class, 'store'])->name('accounts.store');
+    $router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accounts.show');
+    $router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
+    $router->put('/accounts/{id}', [AccountController::class, 'update'])->name('accounts.update');
+    $router->delete('/accounts/{id}', [AccountController::class, 'destroy'])->name('accounts.destroy');
+
+    $router->get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    $router->get('/', [App\Http\Controllers\HomeController::class, 'index']);
+});
