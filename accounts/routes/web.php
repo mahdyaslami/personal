@@ -20,3 +20,6 @@ $router->get('/accounts/{id}', [AccountController::class, 'show'])->name('accoun
 $router->get('/accounts/{id}/edit', [AccountController::class, 'edit'])->name('accounts.edit');
 $router->put('/accounts/{id}', [AccountController::class, 'update'])->name('accounts.update');
 $router->delete('/accounts/{id}', [AccountController::class, 'destroy'])->name('accounts.destroy');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
