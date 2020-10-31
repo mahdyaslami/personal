@@ -26,4 +26,6 @@ $router->prefix('/management')->group(function () use ($router) {
     Auth::routes();
 
     $router->get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    
+    $router->get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('management.home');
 });
