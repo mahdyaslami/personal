@@ -53,15 +53,15 @@
 
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email Address" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
+                    <label for="password" class="sr-only">{{ __('Password') }}</label>
+
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
+
                     @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                     @enderror
-
-                    <label for="password" class="sr-only">{{ __('Password') }}</label>
-
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password" required autocomplete="current-password">
 
                     @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -82,9 +82,11 @@
                     </button>
 
                     @if (Route::has('password.request'))
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
+                    <div class="text-left">
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
+                    </div>
                     @endif
 
                     <p class="mt-2 mb-3 text-muted">&copy; 2020-2020</p>
