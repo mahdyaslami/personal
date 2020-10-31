@@ -1,14 +1,14 @@
-@extends('layout')
+@extends('layouts.accounts')
 
 @section('style')
 <style>
     .col-action {
-        min-width: 127px;"
+        min-width: 127px;
     }
 </style>
 @endsection
 
-@section('content')
+@section('container')
 
 <div class="py-5 text-center">
     <h2>Accounts Credential</h2>

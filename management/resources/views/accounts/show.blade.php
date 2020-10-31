@@ -1,6 +1,6 @@
-@extends('layout')
+@extends('layouts.accounts')
 
-@section('content')
+@section('container')
 
 <div class="py-5 text-center">
     <h2>Account Credential</h2>
