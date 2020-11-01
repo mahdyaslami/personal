@@ -26,6 +26,6 @@ $router->middleware('auth')->group(function () use ($router) {
     $router->delete('/accounts/{id}', [AccountController::class, 'destroy'])->name('accounts.destroy');
 
     $router->get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    $router->get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm']);
+    $router->get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'showRegistrationForm'])->name('register');
     $router->get('/', [App\Http\Controllers\HomeController::class, 'index']);
 });
