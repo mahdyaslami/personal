@@ -25,6 +25,6 @@ class FirebaseMessaging extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return FirebaseMessaging::class;
+        return \App\Services\Messaging\FirebaseMessaging::class;
     }
 }

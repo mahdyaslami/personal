@@ -22,6 +22,14 @@ class Notification implements \JsonSerializable
     }
 
     /**
+     * Create an object of self.
+     */
+    public static function create()
+    {
+        return (new self());
+    }
+
+    /**
      * @param string $title
      * @return $this
      */

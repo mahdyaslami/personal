@@ -13,14 +13,26 @@ class Message implements \JsonSerializable
     protected $message = [];
 
     /**
+     * Create an object of self.
+     */
+    public static function create()
+    {
+        return (new self());
+    }
+
+    /**
      * Set target of message.
      * 
-     * @param string $tapic
+     * @param string $target The value can be a device's registration token, a device group's notification key, or a single topic.
      * @return $this
      */
-    public function withTarget(string $topic)
+    public function withTarget($target, $isTopic = true)
     {
-        $this->message['to'] = "/topics/{$topic}";
+        $this->message['to'] = $target;
+
+        if ($isTopic) {
+            $this->message['to'] = "/topics/{$target}";
+        }
 
         return $this;
     }
