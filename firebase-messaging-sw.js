@@ -60,10 +60,10 @@ messaging.onBackgroundMessage(function (payload) {
     payload
   );
   // Customize notification here
-  const notificationTitle = payload.title;
+  const notificationTitle = payload.notification.title;
   const notificationOptions = {
-    body: payload.body,
-    icon: payload.title,
+    body: payload.notification.body,
+    icon: payload.notification.title,
   };
   self.registration.showNotification(notificationTitle, notificationOptions);
 });
