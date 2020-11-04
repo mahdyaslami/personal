@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Account;
+use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
 {
     public function index()
     {
-        return view('accounts.index', ['accounts' => Account::all()]);
+        return view('accounts.index', ['accounts' => Account::getByUser(Auth::user()->id)]);
     }
 
     public function create()
@@ -19,6 +20,8 @@ class AccountController extends Controller
     public function store()
     {
         $validatedData = $this->validateAccount();
+
+        $validatedData['user_id'] = Auth::user()->id;
 
         $account = Account::create($validatedData);
 
@@ -47,14 +50,22 @@ class AccountController extends Controller
 
         $validatedData = $this->validateAccount();
 
+        $validatedData['user_id'] = Auth::user()->id;
+
         $account->fill($validatedData)->save();
 
-        return $account;
+        return view('accounts.show', ['account' => $account]);
     }
 
     public function destroy($id)
     {
-        Account::destroy($id);
+        $account = Account::find($id);
+
+        if ($account->user_id !== Auth::user()->id) {
+            abort(404, 'Account not found.');
+        }
+
+        $account->delete();
 
         return redirect()->route('accounts.index');
     }
