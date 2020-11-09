@@ -37,16 +37,6 @@
 		<div class='main-content' >
 			
 			<!--=====================================================
-				Page Borders
-			=====================================================-->
-			<div class='page-border border-left' ></div>
-			<div class='page-border border-right' ></div>
-			<div class='page-border border-top' ></div>
-			<div class='page-border border-bottom' ></div>
-			
-			
-			
-			<!--=====================================================
 				Menu Button
 			=====================================================-->
 			<a href='#' class='menu-btn' >
