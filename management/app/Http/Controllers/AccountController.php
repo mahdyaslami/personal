@@ -9,7 +9,7 @@ class AccountController extends Controller
 {
     public function index()
     {
-        return view('accounts.index', ['accounts' => Account::getByUser(Auth::user()->id)]);
+        return view('accounts.index', ['accounts' => Auth::user()->accounts]);
     }
 
     public function create()
@@ -21,36 +21,48 @@ class AccountController extends Controller
     {
         $validatedData = $this->validateAccount();
 
-        $validatedData['user_id'] = Auth::user()->id;
-
-        $account = Account::create($validatedData);
+        $account = Auth::user()->accounts()->create($validatedData);
 
         return view('accounts.show', ['account' => $account]);
     }
 
     public function show($id)
     {
+        $account = Auth::user()->accounts->find($id);
+
+        if (! $account) {
+            abort(404, 'Account not found.');
+        }
+
         return view(
             'accounts.show',
-            ['account' => Account::findOrFail($id)]
+            ['account' => $account]
         );
     }
 
     public function edit($id)
     {
+        $account = Auth::user()->accounts->find($id);
+
+        if (! $account) {
+            abort(404, 'Account not found.');
+        }
+
         return view(
             'accounts.edit',
-            ['account' => Account::findOrFail($id)]
+            ['account' => $account]
         );
     }
 
     public function update($id)
     {
-        $account = Account::findOrFail($id);
+        $account = Auth::user()->accounts->find($id);
+
+        if (! $account) {
+            abort(404, 'Account not found.');
+        }
 
         $validatedData = $this->validateAccount();
-
-        $validatedData['user_id'] = Auth::user()->id;
 
         $account->fill($validatedData)->save();
 
@@ -59,9 +71,9 @@ class AccountController extends Controller
 
     public function destroy($id)
     {
-        $account = Account::find($id);
+        $account = Auth::user()->accounts->find($id);
 
-        if ($account->user_id !== Auth::user()->id) {
+        if (!$account) {
             abort(404, 'Account not found.');
         }
 
