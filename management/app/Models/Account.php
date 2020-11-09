@@ -22,12 +22,12 @@ class Account extends Model
     }
 
     /**
-     * Get user by id.
+     * Get the user that owns the account.
      * 
-     * @param int $id Id of current user.
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo 
      */
-    public static function getByUser($id)
+    public function user()
     {
-        return self::whereUser_id($id)->get();
+        return $this->belongsTo(User::class);
     }
 }
