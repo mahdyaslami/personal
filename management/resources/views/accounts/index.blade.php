@@ -47,6 +47,7 @@
                             @method('DELETE')
                             <input type="submit" class="btn btn-sm btn-danger" value="Delete">
                         </form>
+                        <a href="https://{{ $account->domain }}" class="btn btn-sm btn-primary" target="_blank">Open</a>
                     </td>
                 </tr>
                 @endforeach

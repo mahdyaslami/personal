@@ -15,7 +15,10 @@
             <div class="form-group">
                 <label for="domain">Domain</label>
 
-                <input type="text" value="{{ old('domain') }}" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" @error('domain') aria-describedby="domain-validation-error" @enderror>
+                <div class="d-flex flex-row align-items-baseline">
+                    <div class="font-weight-bold mr-2">https://</div>
+                    <input type="text" value="{{ old('domain') }}" name="domain" class="form-control @error('domain') is-invalid @enderror" id="domain" @error('domain') aria-describedby="domain-validation-error" @enderror>
+                </div>
 
                 @error('domain')
                 <div id="domain-validation-error" class="invalid-feedback">{{ $message }}</div>

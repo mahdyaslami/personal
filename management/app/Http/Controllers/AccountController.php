@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Account;
 use Illuminate\Support\Facades\Auth;
 
 class AccountController extends Controller
