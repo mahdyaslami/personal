@@ -3,7 +3,7 @@
 @section('style')
 <style>
     .col-action {
-        min-width: 127px;
+        min-width: 180px;
     }
 </style>
 @endsection
@@ -25,7 +25,7 @@
                     <th scope="col">Username</th>
                     <th scope="col">Password</th>
                     <th scope="col">Description</th>
-                    <th scope="col"></th>
+                    <th scope="col" class="col-action"></th>
                 </tr>
             </thead>
             <tbody>
